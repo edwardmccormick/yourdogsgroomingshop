@@ -20,20 +20,20 @@ let CurrentHours = date.getHours()
 if (DayOfWeek === 6 && CurrentHours >= 18) {
     date.setDate(date.getDate()+3)
 
-    message = "We'll next be open Tuesday, " + new Intl.DateTimeFormat("en-US", options).format(date) + " at 9:00 am"
+    message = "We'll next be open Tuesday, " + new Intl.DateTimeFormat("en-US", options).format(date) + " at 8:00 am"
 }
 
 if (DayOfWeek === 0) {ShopIsOpen = false
     date.setDate(date.getDate()+2)
 
-    message = "We'll next be open Tuesday, " + new Intl.DateTimeFormat("en-US", options).format(date) + " at 9:00 am"
+    message = "We'll next be open Tuesday, " + new Intl.DateTimeFormat("en-US", options).format(date) + " at 8:00 am"
 }
 
 if (DayOfWeek === 1 || ((DayOfWeek > 1 && DayOfWeek < 6) && CurrentHours >= 18)) {
-    message = "We'll open tomorrow at 9:00 am"
+    message = "We'll open tomorrow at 8:00 am"
 }
 
-if (DayOfWeek > 1 && CurrentHours < 9) {message = "We open today at 9:00 am!"}
+if (DayOfWeek > 1 && CurrentHours < 8) {message = "We open today at 8:00 am!"}
 
 
 // if (ShopIsOpen == false) {message = "Sorry, we're closed!"}
